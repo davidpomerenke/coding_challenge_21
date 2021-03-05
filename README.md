@@ -13,6 +13,6 @@ Nutze einen nicht-proprietären Tech-Stack deiner Wahl und erkläre in einem Rea
 Du solltest für diese Challenge nicht mehr als 1-2 Stunden benötigen. Es ist möglich innerhalb einer Stunde die volle Punktzahl zu erreichen.
 Wir wollen sehen, dass du mit APIs umgehen kannst und ressourcenschonend mit ihnen bist. Du solltest in der Lage sein, sauberen Code zu schreiben und dich mit deinen Tools wohlfühlen. Wir erwarten, dass du reflektieren und begründen kannst, wie du vorgegangen bist. Das Design werden wir nicht bewerten. 
 
-## Viel Spaß!
+## Viel Spaß! 🚀
 Wir freuen uns auf deine Einreichung!
 
