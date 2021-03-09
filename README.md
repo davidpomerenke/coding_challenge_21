@@ -2,6 +2,8 @@
 
 [GovData.de](https://www.govdata.de/) ist das Datenportal für Deutschland. Bund, Länder und Kommunen können hier Daten ihrer Verwaltungen anbieten. Obwohl das “Open-Data-Gesetz” dazu verpflichtet, Daten bereit zu stellen, wurden bisher nur ca. 52.000 Datensätze geteilt. 
 
+![](https://www.govdata.de/o/govdatastyle-theme/images/datavisuals/connectionmap.jpg)
+
 ## Aufgabe
 Stelle in einem kleinen Dashboard übersichtlich dar, wie viele Datensätze jedes Bundesressort auf GovData zur Verfügung gestellt hat. Es sollte schnell ersichtlich sein, welche Ressorts die meisten Daten zur Verfügung gestellt haben. Länder, Kommunen und weitere Einrichtungen können ignoriert werden. 
 
