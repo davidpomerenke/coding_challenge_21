@@ -5,16 +5,15 @@
 ![](https://www.govdata.de/o/govdatastyle-theme/images/datavisuals/connectionmap.jpg)
 
 ## Aufgabe
-Stelle in einem kleinen Dashboard übersichtlich dar, wie viele Datensätze jedes Bundesressort auf GovData zur Verfügung gestellt hat. Es sollte schnell ersichtlich sein, welche Ressorts die meisten Daten zur Verfügung gestellt haben. Länder, Kommunen und weitere Einrichtungen können ignoriert werden. 
+Stelle in einem kleinen Dashboard übersichtlich dar, wie viele Datensätze jedes Bundesministerium auf GovData zur Verfügung gestellt hat. Es sollte schnell ersichtlich sein, welche Ministerien die meisten Daten zur Verfügung gestellt haben. Länder, Kommunen und weitere Einrichtungen können ignoriert werden. 
 
-GovData stellt zwei Schnittstellen zur Verfügung. Nutze entweder die [CKAN-API](https://www.govdata.de/ckan/api/3) [(Doku)](https://docs.ckan.org/en/2.8/api/) oder die [SPARQL-API](https://www.govdata.de/web/guest/sparql-assistent) um diese Aufgabe zu lösen. In 'departments.json' findest du alle Bundesministerien sowie deren nachgelagerte Behörden, die Daten auf GovData geteilt haben. 
+GovData stellt zwei Schnittstellen zur Verfügung. Nutze entweder die [CKAN-API](https://www.govdata.de/ckan/api/3) [(Doku)](https://docs.ckan.org/en/2.8/api/) oder die [SPARQL-API](https://www.govdata.de/web/guest/sparql-assistent), um diese Aufgabe zu lösen. In 'departments.json' findest Du alle Bundesministerien sowie deren nachgelagerte Behörden, die Daten auf GovData geteilt haben. 
 
-Nutze einen nicht-proprietären Tech-Stack deiner Wahl und erkläre in einem Readme wie wir deine Lösung zum Laufen bringen. Bitte schicke deine Lösung per Mail an [challenge@tech4germany.org](mailto:challenge@tech4germany.org). 
+Nutze einen nicht-proprietären Tech-Stack deiner Wahl und erkläre in einem Readme wie wir deine Lösung zum Laufen bringen. Bitte schicke Deine Lösung per Mail an [challenge@tech4germany.org](mailto:challenge@tech4germany.org). 
 
 ## Bewertung
-Du solltest für diese Challenge nicht mehr als 1-2 Stunden benötigen. Es ist möglich innerhalb einer Stunde die volle Punktzahl zu erreichen.
-Wir wollen sehen, dass du mit APIs umgehen kannst und ressourcenschonend mit ihnen bist. Du solltest in der Lage sein, sauberen Code zu schreiben und dich mit deinen Tools wohlfühlen. Wir erwarten, dass du reflektieren und begründen kannst, wie du vorgegangen bist. Das Design werden wir nicht bewerten. 
+Du solltest für diese Challenge nicht mehr als 1-2 Stunden benötigen. Es ist möglich, innerhalb einer Stunde die volle Punktzahl zu erreichen.
+Wir wollen sehen, dass Du mit APIs umgehen kannst und ressourcenschonend mit ihnen bist. Du solltest Dich mit Deinen Tools wohlfühlen und in der Lage sein, sauberen Code zu schreiben. Wir erwarten, dass Du reflektieren und begründen kannst, wie Du vorgegangen bist. Das Design werden wir nicht bewerten. 
 
 ## Viel Spaß! 🚀
 Wir freuen uns auf deine Einreichung!
-
