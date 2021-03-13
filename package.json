@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.1",
+    "open": "^8.0.2"
+  },
+  "scripts": {
+    "start": "node server/index.js"
+  }
+}

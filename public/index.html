@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>GovData Dashboard</title>
+    <style>
+        * {
+            margin: 0px auto;
+            font-family: Roboto, Ubuntu, sans-serif;
+            text-align: center;
+        }
+
+        #loader {
+            margin-top: 100px;
+        }
+
+        #chart {
+            max-width: 800px;
+        }
+
+        /* adapted from https://github.com/perzanko/elm-loading, MIT license */
+        #spinner {
+            width: 60px;
+            height: 60px;
+            position: relative;
+            margin: 0px auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .child {
+            width: 17.142857142857142px;
+            height: 17.142857142857142px;
+            border-radius: 10px;
+            background-color: #74b4c9;
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+            animation-name: animation1;
+        }
+
+        #child1 {
+            animation-delay: 1s;
+        }
+
+        #child2 {
+            animation-delay: 0.5s;
+        }
+
+        #child3 {
+            animation-delay: 0.0001s;
+        }
+
+        @keyframes animation1 {
+            0% {
+                height: 17.142857142857142px;
+                transform: translate3d(0, 0, 0);
+            }
+
+            50% {
+                height: 60px;
+                transform: translate3d(0, 0, 0);
+            }
+
+            100% {
+                height: 17.142857142857142px;
+                transform: translate3d(0, 0, 0);
+            }
+        }
+    </style>
+    <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+</head>
+
+<body>
+    <div id='loader'>
+        <div id='spinner'>
+            <div class='child' id='child1'></div>
+            <div class='child' id='child2'></div>
+            <div class='child' id='child3'></div>
+        </div>
+        <div id='label'></div>
+    </div>
+    <div id='chart'></div>
+    <script>
+        var loading = true;
+        const actionItems = [
+            'Sortiere Papierstapel',
+            'Verschicke Rohrpost',
+            'Scanne Faxe ein',
+            'Kopiere Matrizen',
+            'Studiere DSGVO',
+            'Verschiebe Zuständigkeit',
+            'Verhindere Weltuntergang'
+        ];
+        const changeLabel = () => {
+            if (loading) {
+                el = document.getElementById('label');
+                el.innerText = actionItems[Math.floor(Math.random() * actionItems.length)];
+                setTimeout(changeLabel, Math.random() * 1000 + 700);
+            }
+        };
+        changeLabel();
+        fetch('data')
+            .then(response => response.json())
+            .then(data => {
+                var trace = (data, opacity, name) => ({
+                    x: data.map(a => a[0]),
+                    y: data.map(a => a[1]),
+                    type: 'bar',
+                    name: name,
+                    marker: { color: `rgba(49,130,189,${opacity})` }
+                });
+
+                var data = [
+                    trace(data[0], 0.3, '4 years ago'),
+                    trace(data[1], 0.5, '2 years ago'),
+                    trace(data[2], 0.7, 'today')
+                ];
+
+                var layout = {
+                    title: 'Datensätze je Ministerium (inklusive untergeordneter Ämter)',
+                    xaxis: { tickangle: -45 },
+                    barmode: 'group',
+                    xaxis: { automargin: true, fixedrange: true },
+                    yaxis: { automargin: true, fixedrange: true, type: 'log' },
+                    width: 800,
+                    height: 600,
+                    margin: '0px auto',
+                };
+
+                loading = false;
+                document.getElementById('loader').innerHTML = '';
+                Plotly.newPlot('chart', data, layout);
+            })
+            .catch(error => {
+                loading = false;
+                document.getElementById('loader').innerHTML = 'Could not load data.<br />' + error;
+            });
+    </script>
+</body>
+
+</html>

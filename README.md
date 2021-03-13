@@ -1,3 +1,12 @@
+Solution by David Pomerenke
+
+__Usage__
+
+- Install [npm](https://www.npmjs.com/) 7.6 <= v < 8 and [nodejs](https://nodejs.org/en/) 14.5 <= v < 15.
+- `npm install`
+- `npm start`
+- Set the `PORT` parameter like in `PORT=8080 npm start` to use a different port from `8000`.
+
 # coding_challenge_21
 
 [GovData.de](https://www.govdata.de/) ist das Datenportal für Deutschland. Bund, Länder und Kommunen können hier Daten ihrer Verwaltungen anbieten. Obwohl das “Open-Data-Gesetz” dazu verpflichtet, Daten bereit zu stellen, wurden bisher nur ca. 52.000 Datensätze geteilt. 
